@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+   index.html
+   
+   Copyright 2026 Piter Parque <piter_parque@PC>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Valentín Trevisiol Montiel</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/dark.css">
+	
+</head>
+
+
+<body>
+	
+	<nav class="navbar">
+  <div class="nav-left">
+    <span data-i18n="navbar" class="nav-name">Barra de navegación</span>
+  </div>
+
+  <div class="nav-right">
+    <!-- Idiomas -->
+    <div class="lang-selector">
+		<button id="current-lang" class="icon-btn" title="Idioma">
+			<img class="flag" src="assets/img/flags/es.svg" alt="Español" width="24">
+			<span>Español</span>
+		</button>
+		<div class="lang-menu" id="lang-menu">
+			<button class="lang-option" data-lang="es">
+				<img class="flag" src="assets/img/flags/es.svg" alt="Español">
+				<span>Español</span>
+			</button>
+			<button class="lang-option" data-lang="en">
+				<img class="flag" src="assets/img/flags/us.svg" alt="English">
+				<span>English</span>
+			</button>
+			<button class="lang-option-disabled" data-lang="it">
+				<img class="flag" src="assets/img/flags/it.svg" alt="Italiano">
+				<span>Italiano Pronto</span>
+			</button>
+			<button class="lang-option-disabled" data-lang="jp">
+					<img class="flag" src="assets/img/flags/jp.svg" alt="日本語　すぐ">
+					<span>日本語　すぐ</span>
+			</button>
+		</div>
+	</div>
+    <!-- Dark mode -->
+    <button id="moon-sun-icon" title="Modo oscuro">🌙</button>
+
+    <!-- Descargar CV -->
+    <a data-i18n="download" id="download-cv" class="btn-cv" target="_blank">
+      Descargar CV
+    </a>
+
+  </div>
+</nav>
+
+	<h1 data-i18n="name">Valentín Trevisiol Montiel</h1>	
+	<h2 data-i18n="role">Recepción Hotelera - Administración general - Servicio al cliente</h2>
+	<p data-i18n="profile">Profesional orientado a la hotelería y recepción, con vocación de servicio, trato cordial y experiencia en atención al huésped.</p>
+	<h3 data-i18n="contact">Contacto</h3>
+	<h2 data-i18n="place">Santa Cruz de La Sierra, Bolivia</h2>
+	<a href="tel:+59167695949" target="_blank">
+		<h2 data-i18n="phone">Llamame ahora +59167695949</h2>
+	</a>
+	<a href="mailto:valentin.trevi@gmail.com">
+		<h2 data-i18n="mail">O si gustas, escribe a mi correo: valentin.trevi@gmail.com</h2>
+	</a>
+	
+	
+	<img id="profile-picture" src="assets/img/Profile_pictureCV.jpg" alt="Profile picture">
+
+	<script src="assets/js/theme.js"></script>
+	<script src="assets/js/lang.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+	margin: 0;
+	color: #333;
+	padding-top: 70px;
+}
+
+h1 {
+	color: #1f3c88;
+	margin-left: 80px;
+}
+
+h2 {
+	color: #1f3c88;
+	font-weight: normal;
+}
+
+h3 {
+	color: #1f3c88;
+	font: 19px;
+	
+}
+
+p {
+	max-width: 600px;
+}
+a[href^="tel"],
+a[href^="mailto"] {
+	text-decoration: none;
+	color: inherit;
+}
+a[href^="tel"]:hover,
+a[href^="mailto"]:hover {
+	opacity: 0.60;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+#profile-picture {
+	border: 3px solid #1f3c88;
+	border-radius: 150px;
+	height: 400px;
+	width: 300px;
+	margin-left: 645px;
+}
+.flag {
+	border-radius: 100px;
+	width: 25px;
+	height: auto;
+	display: block;
+}
+
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.nav-name {
+  font-weight: bold;
+  color: #1f3c88;
+}
+
+.nav-right {
+	display: flex;
+	align-items: center;
+}
+
+.nav-right button,
+.nav-right a {
+  margin-left: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /*Este es el tamaño del botón Descargar CV*/
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-right #moon-sun-icon {
+	font-size: 22px;
+}
+
+.nav-right a.btn-cv {
+  border: 1px solid #1f3c88;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.nav-right a.btn-cv:hover {
+  background-color: #1f3c88;
+  color: white;
+}
+
+
+/* LANGUAGE DROPDOWN */
+.lang-option-disabled {
+	opacity: 0.4;
+	cursor: not-allowed;	
+}
+.lang-option {
+	align-items: center;
+	gap: 8px;
+}
+.lang-selector img{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+#current-lang {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* menú oculto */
+.lang-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: none;
+  flex-direction: column;
+  min-width: 140px;
+  z-index: 2000;
+}
+
+.lang-menu button {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.lang-menu button:hover {
+  background-color: #f2f2f2;
+}
+
+
+/*RESPONSIVE DESIGN*/
+
+/*Tablets y celulares*/
+
+@media (max-width: 768px) {
+
+#profile-picture {
+	border: 3px solid #1f3c88;
+	border-radius: 150px;
+	height: 400px;
+	width: 300px;
+	margin-left: 120px;
+	}
+	
+h3 {
+	margin-left: 50%;
+	}
+
+	.navbar {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	
+	.nav-left {
+		width: 100%;
+		margin-bottom: 8px;
+	}
+	
+	.nav-right {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+	
+	.nav-right button,
+	.nav-right a {
+		font-size: 24px;
+	}
+	
+	.nav-right .flag-icon {
+	font-size: 30px;
+}
+
+	.nav-right #moon-sun-icon {
+	font-size: 30px;
+}
+
+	.lang-menu {
+		top: 60px;
+		width: 100%;
+		border-radius: 0;
+	}
+	.lang-option-disabled {
+	display: block;
+	}
+}
+
