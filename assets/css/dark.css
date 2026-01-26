@@ -49,4 +49,26 @@ body.dark-mode .lang-menu button:hover {
   background-color: #333;
 }
 
+/*Social networks:*/
+/*	*/
+body.dark-mode .social-link img {
+	filter: invert(1) brightness(1.2);
+}
 
+/*cambios de color segun la red social*/
+/*LinkedIn:*/
+body.dark-mode .social-link.linkedin:hover img {
+	filter: invert(32%) sepia(95%) saturate(749%) hue-rotate(183deg) brightness(110%) contrast(110%);
+}
+/*Facebook:*/
+body.dark-mode .social-link.facebook:hover img {
+	filter: invert(38%) sepia(84%) saturate(421%) hue-rotate(183deg) brightness(115%) contrast(110%);
+}
+/*YouTube:*/
+body.dark-mode .social-link.youtube:hover img {
+	filter: invert(19%) sepia(94%) saturate(7451%) hue-rotate(357deg) brightness(120%) contrast(120%);
+}
+/*GitHub:*/
+body.dark-mode .social-link.github:hover img {
+	filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+}

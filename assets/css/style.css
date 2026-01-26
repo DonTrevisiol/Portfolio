@@ -160,6 +160,43 @@ li {
 }
 
 
+/*SOCIAL NETWORKS*/
+.social-links {
+	display: flex;
+	gap: 15px;
+	margin-top: 20px;
+	justify-content: center;
+}
+
+.social-link img {
+	width: 28px;
+	height: 28px;
+	opacity: 0.85;
+	transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.social-link:hover img {
+	opacity: 1;
+	transform: scale(1.15);
+}
+
+/*cambios de color segun la red social*/
+/*LinkedIn:*/
+.social-link.linkedin:hover img {
+	filter: invert(32%) sepia(95%) saturate(749%) hue-rotate(183deg) brightness(92%) contrast(101%);
+}
+/*Facebook:*/
+.social-link.facebook:hover img {
+	filter: invert(38%) sepia(84%) saturate(421%) hue-rotate(183deg) brightness(96%) contrast(96%);
+}
+/*YouTube:*/
+.social-link.youtube:hover img {
+	filter: invert(19%) sepia(94%) saturate(7451%) hue-rotate(357deg) brightness(95%) contrast(118%);
+}
+/*GitHub:*/
+.social-link.github:hover img {
+	filter: invert(48%) sepia(13%) saturate(207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+}
 /*RESPONSIVE DESIGN*/
 
 /*Tablets y celulares*/

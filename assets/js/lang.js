@@ -10,6 +10,18 @@ const langNames = {
 	it: "Italiano",
 	jp: "日本語"
 	};
+const redesSociales = {
+	linkedinTitle: "LinkedIn - Perfil profesional",
+	youtubeTitle: "YouTube - Canal oficial",
+	facebookTitle: "Facebook - Perfil personal",
+	githubTitle: "GitHub - Repositorios y código"
+	}
+const socialNetworks = {
+	linkedinTitle: "LinkedIn - Professional profile",
+	youtubeTitle: "YouTube - Official channel",
+	facebookTitle: "Facebook - Personal profile",
+	githubTitle: "GitHub - Repositories and code"
+	}
 	
 const currentLangBtn = document.getElementById("current-lang");
 const langMenu = document.getElementById("lang-menu");
@@ -21,10 +33,17 @@ currentLangBtn.addEventListener("click", () => {
   langMenu.style.display =
     langMenu.style.display === "flex" ? "none" : "flex";
 });
-
+function getSocialTitles(lang) {
+	if (lang === 'en') {
+		return socialNetworks;
+		} else {
+			return redesSociales;
+			}
+	}
 async function setLanguage(lang) {
   const response = await fetch(`data/${lang}.json`);
   const texts = await response.json();
+  const titles = getSocialTitles(lang);
 
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
@@ -32,6 +51,15 @@ async function setLanguage(lang) {
       el.textContent = texts[key];
     }
   });
+  
+  
+  document.querySelectorAll("[data-i18n-title]").forEach(el => {
+    const key = el.getAttribute("data-i18n-title");
+    if (titles[key]) {
+      el.title = titles[key];
+    }
+  });
+
 
   // cambiar flag visible
 	const currentFlag = currentLangBtn.querySelector("img");
