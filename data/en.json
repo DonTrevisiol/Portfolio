@@ -1,11 +1,13 @@
 {
 	"name": "Valentín Trevisiol Montiel",
 	"navbar": "Navigation Bar",
-	"role": "Hotel Front Desk - General Administration - Guest Service",
-	"profile": "Professional focused on hotel reception and guest services, with strong costumer service skills.",
+	"role": "Hotel Front Desk - General Administration - Guest Service - Developer",
+	"profile": "Professional focused on hotel reception and guest services, with strong costumer service experience. Programming code and  computer repair skills.",
 	"download": "Download",
+	"skills": "Tools: ",
 	"contact": "Contact",
 	"place": "Santa Cruz de La Sierra, Bolivia",
 	"phone": "¡Call me! Now! +59167695949",
-	"mail": "Or if you prefer, mail me :D: valentin.trevi@gmail.com"
+	"mail": "Or if you prefer, mail me :D: valentin.trevi@gmail.com",
+	"visits": "Visits: "
 	}

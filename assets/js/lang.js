@@ -59,8 +59,10 @@ async function setLanguage(lang) {
       el.title = titles[key];
     }
   });
-
-
+	// Recordar el cambio de idioma segun el navegador:
+	
+	localStorage.setItem("language", lang);
+	
   // cambiar flag visible
 	const currentFlag = currentLangBtn.querySelector("img");
 	const currentText = currentLangBtn.querySelector("span");
@@ -81,6 +83,8 @@ async function setLanguage(lang) {
   
   // cerrar menú
   langMenu.style.display = "none";
+  document.documentElement.classList.add("lang-ready");
+  document.body.classList.add("loaded");
 }
 
 langOptions.forEach(option => {
@@ -99,4 +103,5 @@ document.addEventListener("click", e => {
   }
 });
 
-setLanguage("es");
+const savedLang = localStorage.getItem("language") || "es";
+setLanguage(savedLang);

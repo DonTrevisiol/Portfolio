@@ -1,3 +1,7 @@
+html:not(.lang-ready) body {
+	visibility: hidden;
+}
+
 body {
 	font-family: Arial, sans-serif;
 	background-color: #f2f2f2;
@@ -7,8 +11,7 @@ body {
 }
 
 h1 {
-	color: #1f3c88;
-	margin-left: 80px;
+	color: #F4A020;
 }
 
 h2 {
@@ -19,7 +22,6 @@ h2 {
 h3 {
 	color: #1f3c88;
 	font: 19px;
-	
 }
 
 p {
@@ -42,13 +44,49 @@ ul {
 li {
 	margin-bottom: 5px;
 }
-
+.main-content {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px;
+}
+.tools {
+	list-style-type: circle;
+	list-style-position: inside;
+	padding: 0;
+	text-align: center;
+}
 #profile-picture {
+	display: block;
+	margin: 20px auto;
 	border: 3px solid #1f3c88;
 	border-radius: 150px;
 	height: 400px;
 	width: 300px;
-	margin-left: 645px;
+}
+#visit-counter {
+	position: fixed;
+	right: 12px;
+	bottom: 12px;
+	z-index: 9999;
+	
+	font-size: 12px;
+	line-height: 1;
+	padding: 6px 10px;
+	border-radius: 8px;
+	
+	background: rgba(0,0,0,0.06);
+	color: #555;
+	
+	pointer-events: none;
+	user-select: none;
+	white-space: nowrap;	
+	
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+body.loaded #visit-counter {
+	opacity: 0.6;
 }
 .flag {
 	border-radius: 100px;
@@ -63,16 +101,21 @@ li {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
   padding: 10px 30px;
-  box-sizing: border-box;
+  
   z-index: 1000;
+  
+  will-change: transform;
 }
 
 .nav-name {
@@ -202,20 +245,35 @@ li {
 /*Tablets y celulares*/
 
 @media (max-width: 768px) {
+body {
+	text-align: center;
+}
+
+h1, h2, h3, p {
+	margin-left: 0;
+	margin-right: 0;
+}
+h1 {
+	margin-top: 100px;
+}
 
 #profile-picture {
-	border: 3px solid #1f3c88;
-	border-radius: 150px;
-	height: 400px;
-	width: 300px;
-	margin-left: 120px;
+	margin: 20px auto;
+	display: block;
 	}
-	
-h3 {
-	margin-left: 50%;
-	}
+.social-links {
+	justify-content: center;
+}
+
+a[href^="tel"],
+a[href^="mailto"] {
+	display: block;
+	text-align: center;
+}
 
 	.navbar {
+		position: sticky;
+		top: 0;
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: center;
@@ -252,6 +310,13 @@ h3 {
 	}
 	.lang-option-disabled {
 	display: block;
+	}
+	#visit-counter {
+		position: static;
+		right: 10px;
+		bottom: 10px;
+		font-size: 11px;
+		padding: 5px 8px;
 	}
 }
 

@@ -29,6 +29,16 @@
 	<title>Valentín Trevisiol Montiel</title>
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<!-- CSS -->
+	<script>
+		(function () {
+			try {
+					const theme = localStorage.getItem("theme");
+					if (theme === "dark") {
+						document.documentElement.classList.add("dark-mode");
+					}
+				} catch (e) {}
+			})();
+	</script>
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/dark.css">
 	
@@ -79,11 +89,45 @@
   </div>
 </nav>
 
+<!--		CONTENEDOR		-->
+
+<div class="main-content">
+
 	<h1 data-i18n="name">Valentín Trevisiol Montiel</h1>	
-	<h2 data-i18n="role">Recepción Hotelera - Administración general - Servicio al cliente</h2>
-	<p data-i18n="profile">Profesional orientado a la hotelería y recepción, con vocación de servicio, trato cordial y experiencia en atención al huésped.</p>
+	<h2 data-i18n="role">Recepción Hotelera - Administración general - Servicio al cliente - Programador</h2>
+	<h4 data-i18n="profile">Profesional orientado a la hotelería y recepción, con vocación de servicio, trato cordial y experiencia en atención al huésped. Habilidades de programación y reparación de computadoras.</h4>
+<!--		FOTO DE PERFIL 		-->
+	<img id="profile-picture" src="assets/img/Profile_pictureCV.jpg" alt="Profile picture">
+
+<!--		HERRAMIENTAS 		-->	
+
+	<h1 data-i18n="skills">Herramientas: </h1>
+
+	<ul class="tools">
+		<li>Windows</li>
+		<li>Linux</li>
+		<li>Android</li>
+		<li>Booking</li>
+		<li>Airbnb</li>
+		<li>Sony Vegas Pro</li>
+		<li>Adobe Premiere</li>
+		<li>Microsoft Office</li>
+		<li>LibreOffice</li>
+		<li>GIMP</li>
+		<li>FL Studio</li>
+		<li>LMMS</li>
+		<li>Mozilla Firefox</li>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+		<li>Python</li>
+	</ul>	
+
+<!--		CONTACTO 		-->
+	
 	<h3 data-i18n="contact">Contacto</h3>
-	<h2 data-i18n="place">Santa Cruz de La Sierra, Bolivia</h2>
+	
+	<h2 data-i18n="place"> Santa Cruz de La Sierra, Bolivia</h2>
 	<a href="tel:+59167695949" target="_blank">
 		<h2 data-i18n="phone">Llamame ahora +59167695949</h2>
 	</a>
@@ -91,8 +135,6 @@
 		<h2 data-i18n="mail">O si gustas, escribe a mi correo: valentin.trevi@gmail.com</h2>
 	</a>
 	
-	
-	<img id="profile-picture" src="assets/img/Profile_pictureCV.jpg" alt="Profile picture">
 
 <!--		REDES SOCIALES 		-->
 	<div class="social-links">
@@ -109,8 +151,18 @@
 			<img src="assets/img/social/github.svg" alt="GitHub">
 		</a>
 	</div>
+</div>
+<!--		CONTADOR DE VISITAS 		-->
+	<div id="visit-counter">
+		<span data-i18n="visits">Visitas: </span>
+		<span id="visit-number">0</span>
+	</div>
+	
+
+<!--SCRIPTS-->
 	<script src="assets/js/theme.js"></script>
 	<script src="assets/js/lang.js"></script>
+	<script src="assets/js/visits.js"></script>
 </body>
 
 </html>

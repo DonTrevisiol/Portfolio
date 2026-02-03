@@ -1,74 +1,92 @@
 /* MODO OSCURO */
+html.dark-mode,
+html.dark-mode body {
+	background-color: #121212;
+	color: #eaeaea;
+}
 
-body.dark-mode {
-  background-color: #121212;
-  color: #eaeaea;
+html.dark-mode body h2 {
+	color: #90caf9;
+}
+html.dark-mode body h3 {
+	color: #90caf9;
 }
 
 /* Navbar */
-body.dark-mode .navbar {
+html.dark-mode body .navbar {
   background-color: #1e1e1e;
   border-bottom: 1px solid #333;
 }
 
-body.dark-mode .nav-name {
+html.dark-mode body .nav-name {
   color: #90caf9;
 }
 
-body.dark-mode .nav-right button,
-body.dark-mode .nav-right a {
+html.dark-mode body .nav-right button,
+html.dark-mode body .nav-right a {
   color: #eaeaea;
 }
 
 /* Botón CV */
-body.dark-mode .btn-cv {
+html.dark-mode body .btn-cv {
   border-color: #90caf9;
 }
 
-body.dark-mode .btn-cv:hover {
+html.dark-mode body .btn-cv:hover {
   background-color: #90caf9;
   color: #121212;
 }
 
 /* Secciones */
-body.dark-mode section {
+html.dark-mode body section {
   background-color: #1e1e1e;
 }
 
 /* Links */
-body.dark-mode a {
+html.dark-mode body a {
   color: #90caf9;
 }
 
-body.dark-mode .lang-menu {
+html.dark-mode body .lang-menu {
   background-color: #1e1e1e;
   border-color: #333;
 }
 
-body.dark-mode .lang-menu button:hover {
+html.dark-mode body .lang-menu button:hover {
   background-color: #333;
+}
+
+html.dark-mode #profile-picture {
+	border: 3px solid #F4A020
+}
+}
+
+/*Visit's counter:*/
+html.dark-mode #visit-counter {
+	background: rgba(255,255,255,0.12);
+	color: #fff;
 }
 
 /*Social networks:*/
 /*	*/
-body.dark-mode .social-link img {
+html.dark-mode body .social-link img {
 	filter: invert(1) brightness(1.2);
 }
 
 /*cambios de color segun la red social*/
 /*LinkedIn:*/
-body.dark-mode .social-link.linkedin:hover img {
+html.dark-mode body .social-link.linkedin:hover img {
 	filter: invert(32%) sepia(95%) saturate(749%) hue-rotate(183deg) brightness(110%) contrast(110%);
 }
 /*Facebook:*/
-body.dark-mode .social-link.facebook:hover img {
+html.dark-mode body .social-link.facebook:hover img {
 	filter: invert(38%) sepia(84%) saturate(421%) hue-rotate(183deg) brightness(115%) contrast(110%);
 }
 /*YouTube:*/
-body.dark-mode .social-link.youtube:hover img {
+html.dark-mode body .social-link.youtube:hover img {
 	filter: invert(19%) sepia(94%) saturate(7451%) hue-rotate(357deg) brightness(120%) contrast(120%);
 }
 /*GitHub:*/
-body.dark-mode .social-link.github:hover img {
+html.dark-mode body .social-link.github:hover img {
 	filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
 }
