@@ -1,17 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const visitEl = document.getElementById("visit-number");
   if (!visitEl) return;
 
-  const NAMESPACE = "dontrevisiol-portfolio";
-  const KEY = "visits";
+  try {
+    const res = await fetch(
+      "https://dontrevisiol.goatcounter.com/counter/TOTAL.json"
+    );
 
-  fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
-    .then(res => res.json())
-    .then(data => {
-      visitEl.textContent = data.value;
-    })
-    .catch(err => {
-      console.error("Error contador de visitas:", err);
-      visitEl.textContent = "—";
-    });
+    const data = await res.json();
+    visitEl.textContent = data.count;
+  } catch (err) {
+    console.error("Error obteniendo visitas:", err);
+    visitEl.textContent = "-";
+  }
+
+  document.body.classList.add("loaded");
 });
