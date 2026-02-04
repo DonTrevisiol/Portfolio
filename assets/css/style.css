@@ -82,10 +82,6 @@ li {
 	user-select: none;
 	white-space: nowrap;	
 	
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
-body.loaded #visit-counter {
 	opacity: 0.6;
 }
 .flag {
