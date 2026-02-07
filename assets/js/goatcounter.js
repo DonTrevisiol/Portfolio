@@ -7,19 +7,21 @@ function loadVisits() {
       no_branding: true
     });
 
-    // Limpiamos el contenido después de que se inserte
+    // Esperamos que GoatCounter escriba
     setTimeout(() => {
       const el = document.querySelector("#gc-visits");
       if (!el) return;
 
-      const text = el.innerText || "";
-      const match = text.match(/\d+/);
+      const match = el.innerText.match(/\d+/);
+      const visits = match ? match[0] : "0";
 
-      el.innerHTML = match ? match[0] : "0";
-    }, 500);
+      // dejamos texto fijo y eliminamos nodos internos
+      el.textContent = visits;
+
+    }, 1000);
 
   } else {
-    setTimeout(loadVisits, 1000);
+    setTimeout(loadVisits, 500);
   }
 }
 
