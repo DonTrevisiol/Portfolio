@@ -7,14 +7,16 @@ function loadVisits() {
       no_branding: true
     });
 
-    // Esperamos a que inserte el texto y dejamos solo el número
+    // Limpiamos el contenido después de que se inserte
     setTimeout(() => {
       const el = document.querySelector("#gc-visits");
-      if (el) {
-        const num = el.textContent.match(/\d+/);
-        if (num) el.textContent = num[0];
-      }
-    }, 300);
+      if (!el) return;
+
+      const text = el.innerText || "";
+      const match = text.match(/\d+/);
+
+      el.innerHTML = match ? match[0] : "0";
+    }, 500);
 
   } else {
     setTimeout(loadVisits, 1000);
