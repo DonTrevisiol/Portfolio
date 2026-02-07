@@ -1,28 +1,28 @@
-function debugGoatCounter() {
-	console.log("DEBUG: comprobando GoatCounter...");
-	}
-	
-const el = document.querySelector("#gc-visits");
-console.log("Elemento contador: ", el);
+function updateVisitCount() {
+    console.log("Comprobando contador...");
 
-if (!el) {
-	console.log("No existe #gc-visits");
-	}
-	
-console.log("window.goatcounter =", window.goatcounter);
+    const el = document.querySelector("#gc-visits");
 
-if (window.goatcounter && goatcounter.visit_count) {
-	console.log("visit_count: ", goatcounter.visit_count);
-	
-	const count = goatcounter.visit_count.count;
-	console.log("Número recibido: ", count);
-	
-	el.textContent = count ?? "0";
-	} else {
-		console.log("GoatCounter aun no esta listo.");
-		}
+    if (!el) {
+        console.log("No existe #gc-visits");
+        return;
+    }
 
-	
-	setTimeout(debugGoatCounter, 1000);
-	setTimeout(debugGoatCounter, 2000);
-	setTimeout(debugGoatCounter, 3000);
+    if (window.goatcounter && goatcounter.visit_count) {
+        const count = goatcounter.visit_count.count;
+        console.log("Visitas recibidas:", count);
+
+        el.textContent = count ?? "0";
+    } else {
+        console.log("GoatCounter aún no está listo...");
+    }
+}
+
+// Esperar a que cargue la página
+window.addEventListener("load", () => {
+    // Intentar varias veces por carga lenta
+    setTimeout(updateVisitCount, 1000);
+    setTimeout(updateVisitCount, 2000);
+    setTimeout(updateVisitCount, 3000);
+    setTimeout(updateVisitCount, 5000);
+});
