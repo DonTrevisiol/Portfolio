@@ -7,7 +7,6 @@ console.log("Elemento contador: ", el);
 
 if (!el) {
 	console.log("No existe #gc-visits");
-	return;
 	}
 	
 console.log("window.goatcounter =", window.goatcounter);
