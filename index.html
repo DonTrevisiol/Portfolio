@@ -33,15 +33,10 @@
     async src="https://gc.zgo.at/count.js"></script>
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<!-- CSS -->
-	<script>
-		(function () {
-			try {
-					const theme = localStorage.getItem("theme");
-					if (theme === "dark") {
-						document.documentElement.classList.add("dark-mode");
-					}
-				} catch (e) {}
-			})();
+	<script
+	data-goatcounter="https://dontrevisiol.goatcounter.com/count"
+	async
+	src="https://gc.zgo.at/count.js">
 	</script>
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/dark.css">
@@ -159,14 +154,15 @@
 <!--		CONTADOR DE VISITAS 		-->
 	<div id="visit-counter">
 		<span data-i18n="visits">Visitas: </span>
-		<span id="gc-visits">...</span>
+		<img
+		src="https://dontrevisiol.goatcounter.com/counter/TOTAL.svg?label=&no_branding=1" alt="visitas" style="height:1em; vertical-align:middle;"
+		>
 	</div>
 	
 <!--SCRIPTS-->
 <!--	<script data-goatcounter="https://dontrevisiol.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>-->
 	<script src="assets/js/theme.js"></script>
 	<script src="assets/js/lang.js"></script>
-	<script src="assets/js/goatcounter.js"></script>
 </body>
 
 </html>
