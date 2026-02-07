@@ -28,8 +28,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Valentín Trevisiol Montiel</title>
-	<script data-goatcounter="https://dontrevisiol.goatcounter.com/count"
-        async src="https://gc.zgo.at/count.js"></script>
+	<script 
+	data-goatcounter="https://dontrevisiol.goatcounter.com/count"
+    async src="https://gc.zgo.at/count.js"></script>
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<!-- CSS -->
 	<script>
@@ -158,14 +159,21 @@
 <!--		CONTADOR DE VISITAS 		-->
 	<div id="visit-counter">
 		<span data-i18n="visits">Visitas: </span>
-		<img src="https://dontrevisiol.goatcounter.com/counter/TOTAL.svg" alt="visits" style="vertical-align: middle; height: 20px;">
+		<span id="gc-visits">...</span>
 	</div>
 	
 <!--SCRIPTS-->
 <!--	<script data-goatcounter="https://dontrevisiol.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>-->
-	<script src="assets/js/visits.js"></script>
 	<script src="assets/js/theme.js"></script>
 	<script src="assets/js/lang.js"></script>
+	<script>
+		setTimeout(() => {
+			const el = document.querySelector("#gc-visits");
+			if (window.goatcounter && goatcounter.visit_count) {
+				el.textContent = goatcounter.visit_count.count || "";
+				}
+			}, 1500);
+	</script>
 </body>
 
 </html>
