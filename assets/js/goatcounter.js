@@ -22,7 +22,7 @@ if (window.goatcounter && goatcounter.visit_count) {
 	} else {
 		console.log("GoatCounter aun no esta listo.");
 		}
-	}
+
 	
 	setTimeout(debugGoatCounter, 1000);
 	setTimeout(debugGoatCounter, 2000);
