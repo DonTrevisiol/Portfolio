@@ -1,8 +1,5 @@
 function loadVisits() {
-  console.log("window.goatcounter:", window.goatcounter);
-
   if (window.goatcounter && window.goatcounter.visit_count) {
-    console.log("GoatCounter listo");
 
     window.goatcounter.visit_count({
       append: "#gc-visits",
@@ -10,8 +7,16 @@ function loadVisits() {
       no_branding: true
     });
 
+    // Esperamos a que inserte el texto y dejamos solo el número
+    setTimeout(() => {
+      const el = document.querySelector("#gc-visits");
+      if (el) {
+        const num = el.textContent.match(/\d+/);
+        if (num) el.textContent = num[0];
+      }
+    }, 300);
+
   } else {
-    console.log("GoatCounter aún no cargó, reintentando...");
     setTimeout(loadVisits, 1000);
   }
 }
