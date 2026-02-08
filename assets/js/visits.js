@@ -1,6 +1,8 @@
 function loadVisits() {
   const el = document.getElementById("gc-visits");
-  if (!el) return;
+  const container = document.getElementById("visit-counter");
+
+  if (!el || !container) return;
 
   fetch("https://dontrevisiol.goatcounter.com/counter/TOTAL.json")
     .then(r => r.json())
@@ -8,11 +10,11 @@ function loadVisits() {
       if (data && data.count) {
         el.textContent = data.count;
       } else {
-        el.textContent = "—";
+        container.style.display = "none";
       }
     })
     .catch(() => {
-      el.textContent = "—";
+      container.style.display = "none";
     });
 }
 
