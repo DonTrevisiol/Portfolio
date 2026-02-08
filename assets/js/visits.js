@@ -1,8 +1,19 @@
-fetch("https://dontrevisiol.goatcounter.com/counter/TOTAL.json")
-.then(r => r.json())
-.then(data => {
-	document.getElementById("gc-visits").textContent = data.count ?? 0;
-	})
-	.catch(() => {
-		document.getElementById("gc-visits").textContent = "0";
-		});
+function loadVisits() {
+  const el = document.getElementById("gc-visits");
+  if (!el) return;
+
+  fetch("https://dontrevisiol.goatcounter.com/counter/TOTAL.json")
+    .then(r => r.json())
+    .then(data => {
+      if (data && data.count) {
+        el.textContent = data.count;
+      } else {
+        el.textContent = "—";
+      }
+    })
+    .catch(() => {
+      el.textContent = "—";
+    });
+}
+
+loadVisits();
