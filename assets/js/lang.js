@@ -11,12 +11,14 @@ const langNames = {
 	jp: "日本語"
 	};
 const redesSociales = {
+	whatsappTitle: "WhatsApp - Escríbeme",
 	linkedinTitle: "LinkedIn - Perfil profesional",
 	youtubeTitle: "YouTube - Canal oficial",
 	facebookTitle: "Facebook - Perfil personal",
 	githubTitle: "GitHub - Repositorios y código"
 	}
 const socialNetworks = {
+	whatsappTitle: "WhatsApp - Chat me",
 	linkedinTitle: "LinkedIn - Professional profile",
 	youtubeTitle: "YouTube - Official channel",
 	facebookTitle: "Facebook - Personal profile",
@@ -52,13 +54,21 @@ async function setLanguage(lang) {
     }
   });
   
-  
+  // Cambiar title de las redes sociales:
   document.querySelectorAll("[data-i18n-title]").forEach(el => {
     const key = el.getAttribute("data-i18n-title");
     if (titles[key]) {
       el.title = titles[key];
     }
   });
+  // Cambiar placeholders del form:
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+	  const key = el.getAttribute("data-i18n-placeholder");
+	  if (texts[key]) {
+		  el.placeholder = texts[key]
+		  }
+	  })
+  
 	// Recordar el cambio de idioma segun el navegador:
 	
 	localStorage.setItem("language", lang);

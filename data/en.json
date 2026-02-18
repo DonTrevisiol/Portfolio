@@ -5,9 +5,17 @@
 	"profile": "Professional focused on hotel reception and guest services, with strong costumer service experience. Programming code and  computer repair skills.",
 	"download": "Download",
 	"skills": "Tools: ",
+	"proyects": "Proyects: ",
+	"proyect1": "Hotel cash movements register",
 	"contact": "Contact",
 	"place": "Santa Cruz de La Sierra, Bolivia",
 	"phone": "¡Call me! Now! +59167695949",
 	"mail": "Or if you prefer, mail me :D: valentin.trevi@gmail.com",
-	"visits": "Visits: "
+	"visits": "Views: ",
+	"namePlaceholder": "Your name",
+	"emailPlaceholder": "your email",
+	"messagePlaceholder": "Your message",
+	"sendMessage": "Send message",
+	"formSucces": "Message sent successfully",
+	"formError": "Error sending message"
 	}

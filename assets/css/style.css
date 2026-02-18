@@ -190,6 +190,40 @@ li {
   background-color: #f2f2f2;
 }
 
+/*	CONTACT FORM:	*/
+#contact-form {
+	max-width: 600px;
+	margin: auto;
+}
+
+.form-row {
+	display: flex;
+	gap: 10px;
+}
+
+.form-row input {
+	flix: 1;
+	background: #D3D3D3;
+}
+
+#contact-form textarea {
+	width: 100%;
+	height: 140px;
+	margin-top: 10px;
+	resize: none;
+	border-radius: 8px;
+	background: #D3D3D3;
+}
+#contact-form button {
+	margin-top: 10px;
+	width: 100%;
+}
+#form-status {
+	margin-top: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
 
 /*SOCIAL NETWORKS*/
 .social-links {
@@ -212,6 +246,10 @@ li {
 }
 
 /*cambios de color segun la red social*/
+/*WhatsApp*/
+.social-link.whatsapp:hover img {
+	filter: invert(61%) sepia(94%) saturate(389%) hue-rotate(88deg);
+}
 /*LinkedIn:*/
 .social-link.linkedin:hover img {
 	filter: invert(32%) sepia(95%) saturate(749%) hue-rotate(183deg) brightness(92%) contrast(101%);
