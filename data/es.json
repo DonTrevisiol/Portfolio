@@ -14,8 +14,12 @@
 	"visits": "Visitas: ",
 	"namePlaceholder": "Tu nombre",
 	"emailPlaceholder": "Tu correo",
+	"titleValidation": "Ingresa un correo válido",
 	"messagePlaceholder": "Tu mensaje",
 	"sendMessage": "Enviar mensaje",
-	"formSucces": "Mensaje enviado correctamente",
-	"formError": "Error al enviar el mensaje"
+	"formSuccess": "Mensaje enviado correctamente",
+	"formError": "Error al enviar el mensaje",
+	"requiredField": "Por favor, completa este campo.",
+	"invalidEmail": "Por favor, introduce un correo electrónico válido.",
+	"formSuccess": "Mensaje enviado correctamente."
 	}

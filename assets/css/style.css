@@ -224,6 +224,70 @@ li {
 	font-weight: bold;
 }
 
+/* Mensajes */
+#form-status {
+  margin-top: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#form-status.success {
+  color: #28a745;
+}
+
+#form-status.error {
+  color: #dc3545;
+}
+
+/* Input error */
+.input-error {
+  border: 2px solid #dc3545 !important;
+  animation: shake 0.3s ease;
+}
+
+/* Botón loading */
+#submit-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  display: none;
+  animation: spin 0.6s linear infinite;
+}
+
+.spinner.active {
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animación shake */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
 
 /*SOCIAL NETWORKS*/
 .social-links {
@@ -344,5 +408,17 @@ a[href^="mailto"] {
 		font-size: 11px;
 		padding: 5px 8px;
 	}
+}
+
+
+
+
+
+/*HONEYPOT*/
+.honeypot {
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+	pointer-events: none;
 }
 

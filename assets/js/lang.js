@@ -46,6 +46,8 @@ async function setLanguage(lang) {
   const response = await fetch(`data/${lang}.json`);
   const texts = await response.json();
   const titles = getSocialTitles(lang);
+  
+  document.documentElement.lang = lang;
 
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
@@ -114,4 +116,5 @@ document.addEventListener("click", e => {
 });
 
 const savedLang = localStorage.getItem("language") || "es";
+document.documentElement.lang = savedLang;
 setLanguage(savedLang);

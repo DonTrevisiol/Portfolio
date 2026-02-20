@@ -139,13 +139,18 @@
 	
 <!--		FORMULARIO		-->
 	<h3 data-i18n="contact">Contacto</h3>
-		<form id="contact-form" action="https://formsubmit.co/valentin.trevi@gmail.com" method="POST">
+		<form id="contact-form" action="https://formsubmit.co/valentin.trevi@gmail.com" method="POST" novalidate>
 			<div class="form-row">
 				<input type="text" name="name" data-i18n-placeholder="namePlaceholder" required>
-				<input type="email" name="email" data-i18n-placeholder="emailPlaceholder" required>
+				<input type="email" name="email" data-i18n-placeholder="emailPlaceholder" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" data-i18n-title="titleValidation">
 			</div>
 			<textarea name="message" data-i18n-placeholder="messagePlaceholder" required></textarea>
-			<button type="submit" data-i18n="sendMessage">Enviar mensaje</button>
+			<!--	HONEYPOT ANTI-SPAM		-->
+			<input type="text" name="website" class="honeypot" autocomplete="off">
+			<button type="submit" id="submit-btn">
+				<span class="btn-text" data-i18n="sendMessage">Enviar mensaje</span>
+				<span class="spinner"></span>
+			</button>
 			<div id="form-status"></div>
 <!-- Opcional: evitar captcha -->
 			<input type="hidden" name="_captcha" value="false">
