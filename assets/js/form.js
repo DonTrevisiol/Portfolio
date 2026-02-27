@@ -14,7 +14,6 @@ form.addEventListener("submit", async function (e) {
   const texts = await fetch(`data/${lang}.json`).then(r => r.json());
 
   const nameInput = form.querySelector('input[name="name"]');
-  const emailInput = form.querySelector('input[name="email"]');
   const messageInput = form.querySelector('textarea[name="message"]');
   const submitBtn = document.getElementById("submit-btn");
   const spinner = submitBtn.querySelector(".spinner");
@@ -48,16 +47,6 @@ function showError(input, message) {
   // Validaciones
   if (!nameInput.value.trim()) {
     showError(nameInput, texts.requiredField);
-    return;
-  }
-
-  if (!emailInput.value.trim()) {
-    showError(emailInput, texts.requiredField);
-    return;
-  }
-
-  if (!emailInput.checkValidity()) {
-    showError(emailInput, texts.invalidEmail);
     return;
   }
 

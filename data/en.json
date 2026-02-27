@@ -11,17 +11,12 @@
 	"place": "Santa Cruz de La Sierra, Bolivia",
 	"phone": "¡Call me! Now! +59167695949",
 	"mail": "Or if you prefer, mail me :D: valentin.trevi@gmail.com",
-	"titleValidation": "Into a valid email",
 	"visits": "Views: ",
 	"namePlaceholder": "Your name",
-	"emailPlaceholder": "your email",
 	"messagePlaceholder": "Your message",
 	"sendMessage": "Send message",
 	"formSuccess": "Message sent successfully",
 	"formError": "Error sending message",
 	"requiredField": "Please fill out this field.",
-	"invalidEmail": "Please enter a valid email address.",
 	"formSuccess": "Message sent successfully."
-
-
 	}
