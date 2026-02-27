@@ -112,7 +112,7 @@ html.dark-mode #visit-counter {
 /* Dark mode */
 .dark-mode .frame {
   background: #111;
-  border-color: #fff;
+  border-color: #81c784;
   box-shadow: 8px 8px 0 #000;
 }
 
