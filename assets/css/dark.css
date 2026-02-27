@@ -65,6 +65,14 @@ html.dark-mode #visit-counter {
 	background: rgba(255,255,255,0.12);
 	color: #fff;
 }
+.dark-mode .selection-box {
+	border: 3px solid #ffffff;
+	background-color: #111;
+	box-shadow: 6px 6px 0px #ffffff;
+}
+.dark-mode .selection-box:hover {
+	box-shadow: 10px 10px 0 #ffffff;
+}
 
 /*Social networks:*/
 /*	*/

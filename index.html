@@ -1,3 +1,4 @@
+<!-- INDEX.HTML -->
 <!DOCTYPE html>
 <html lang="es">
 <!--
@@ -94,17 +95,29 @@
 	<h4 data-i18n="profile">Profesional orientado a la hotelería y recepción, con vocación de servicio, trato cordial y experiencia en atención al huésped. Habilidades de programación y reparación de computadoras.</h4>
 <!--		FOTO DE PERFIL 		-->
 	<img id="profile-picture" src="assets/img/Profile_pictureCV.jpg" alt="Profile picture">
+<!--		LENGUAGE			-->
+<section class="section-box" id="lang">
+	<h1 data-i18n="language">Lenguas: </h1>
+
+</section>
+
 
 <!--		PROYECTOS			-->
+<section class="section-box" id="projects">
+
 	<h1 data-i18n="proyects">Proyectos: </h1>
 	<ul>
 		<li>
 			<a data-i18n="proyect1" href="https://dontrevisiol.github.io/registroDeCaja" target="_blank">Registro de movimientos de caja para hotel</a>
 		</li>
 	</ul>
-
+</section>
+<!--		LOGROS				-->
+<section class="section-box" id="LOGROS">
+	<h1 data-i18n="LOGROS">LOGROS: </h1>
+</section>
 <!--		HERRAMIENTAS 		-->	
-
+<section class="section-box" id="tools">
 	<h1 data-i18n="skills">Herramientas: </h1>
 
 	<ul class="tools">
@@ -126,9 +139,14 @@
 		<li>JavaScript</li>
 		<li>Python</li>
 	</ul>	
+</section>
+<!--		SOBRE MÍ		-->
+<section class="section-box" id="about">
+	<h1 data-i18n="about">Sobre mí </h1>
+</section>
 
 <!--		CONTACTO 		-->
-	
+<section class="section-box" id="contact">
 	<h2 data-i18n="place"> Santa Cruz de La Sierra, Bolivia</h2>
 	<a href="tel:+59167695949" target="_blank">
 		<h2 data-i18n="phone">Llamame ahora +59167695949</h2>
@@ -136,8 +154,9 @@
 	<a href="mailto:valentin.trevi@gmail.com">
 		<h2 data-i18n="mail">O si gustas, escribe a mi correo: valentin.trevi@gmail.com</h2>
 	</a>
-	
+</section>	
 <!--		FORMULARIO		-->
+<section class="section-box" id="form">	
 	<h3 data-i18n="contact">Contacto</h3>
 		<form id="contact-form" action="https://formsubmit.co/valentin.trevi@gmail.com" method="POST" novalidate>
 			<div class="form-row">
@@ -151,11 +170,12 @@
 				<span class="spinner"></span>
 			</button>
 			<div id="form-status"></div>
-<!-- Opcional: evitar captcha -->
+			<!-- Opcional: evitar captcha -->
 			<input type="hidden" name="_captcha" value="false">
 		</form>
-
+</section>
 <!--		REDES SOCIALES 		-->
+<section class="section-box" id="media">
 	<div class="social-links">
 		<a class="social-link whatsapp" href="https://wa.link/4uxv4q" target="_blank" data-i18n-title="whatsappTitle">
 			<img src="assets/img/social/whatsapp.svg" alt="WhatsApp">
@@ -173,13 +193,14 @@
 			<img src="assets/img/social/github.svg" alt="GitHub">
 		</a>
 	</div>
-</div>
+</section>
 <!--		CONTADOR DE VISITAS 		-->
+<section class="section-box" id="views">
 	<div id="visit-counter">
 		<span data-i18n="visits">Visitas: </span>
 		<span id="gc-visits"></span>
 	</div>
-	
+</section>	
 <!--SCRIPTS-->
 <!--	<script data-goatcounter="https://dontrevisiol.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>-->
 	<script src="assets/js/theme.js"></script>

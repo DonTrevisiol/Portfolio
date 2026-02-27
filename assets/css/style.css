@@ -3,8 +3,9 @@ html:not(.lang-ready) body {
 }
 
 body {
+	
 	font-family: Arial, sans-serif;
-	background-color: #f2f2f2;
+	background-color: #f5f5f5;
 	margin: 0;
 	color: #333;
 	padding-top: 70px;
@@ -468,6 +469,21 @@ input,
 textarea {
   cursor: url("../cursors/text.cur"), text;
 }
+
+/*---*/
+/*	SECTION BOX BASE:	*/
+.section-box {
+	border: 3px solid #000;
+	padding: 25px;
+	margin: 40px 0;
+	background-color: #ffffff;
+	box-shadow: 6px 6px 0px #000;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.section-box:hover {
+	transform: translate(-4px, -4px);
+	box-shadow: 10px 10px 0px #000;
+	}
 
 
 /*HONEYPOT*/
