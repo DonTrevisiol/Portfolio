@@ -26,6 +26,22 @@ html.dark-mode body .nav-right button,
 html.dark-mode body .nav-right a {
   color: #eaeaea;
 }
+/* Dark mode LOGROS */
+.dark-mode .frame {
+  background: linear-gradient(
+    45deg,
+    #5c3a1a,
+    #7a4a25,
+    #4b2e14
+  );
+  border-color: #3a1f0f;
+}
+
+.dark-mode .frame iframe {
+  background: #222;
+  border-color: #ddd;
+}
+
 
 /* Botón CV */
 html.dark-mode body .btn-cv {

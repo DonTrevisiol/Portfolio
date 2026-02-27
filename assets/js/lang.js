@@ -99,6 +99,14 @@ async function setLanguage(lang) {
   document.body.classList.add("loaded");
 }
 
+document.querySelectorAll(".toggle-cert").forEach(button => {
+  button.addEventListener("click", () => {
+    const frame = button.previousElementSibling;
+    frame.style.display =
+      frame.style.display === "block" ? "none" : "block";
+  });
+});
+
 langOptions.forEach(option => {
 	option.addEventListener("click", () => {
 		const lang = option.dataset.lang;
