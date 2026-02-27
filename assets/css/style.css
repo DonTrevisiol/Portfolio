@@ -114,6 +114,7 @@ li {
 .nav-name {
   font-weight: bold;
   color: #1f3c88;
+  text-decoration: none;
 }
 
 .nav-right {
@@ -424,18 +425,15 @@ body {
 }
 
 /* Links reales */
-a {
-  cursor: url("../cursors/link.cur"), pointer;
-}
-
-/* Botones completos */
-button {
+a,
+button,
+#current-lang,
+.lang-option {
   cursor: url("../cursors/link.cur"), pointer;
 }
 
 /* Asegurar que hijos del botón usen el mismo cursor */
-button *,
-a * {
+a *, button *, #current-lang *, .lang-option * {
   cursor: inherit;
 }
 
@@ -445,7 +443,12 @@ textarea {
   cursor: url("../cursors/text.cur"), text;
 }
 
-/* Botón deshabilitado */
+/* Opciones de idioma deshabilitadas */
+.lang-option-disabled {
+  cursor: url("../cursors/unavailable.cur"), not-allowed;
+}
+
+/* Botones deshabilitados */
 button:disabled {
   cursor: url("../cursors/unavailable.cur"), not-allowed;
 }
@@ -453,6 +456,15 @@ button:disabled {
 /* Elementos con title */
 [title] {
   cursor: url("../cursors/help.cur"), help;
+}
+
+/* === CUSTOM CURSORS REFINADO === */
+
+
+/* Inputs y textareas */
+input,
+textarea {
+  cursor: url("../cursors/text.cur"), text;
 }
 
 
