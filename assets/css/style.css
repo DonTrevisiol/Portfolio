@@ -411,7 +411,38 @@ a[href^="mailto"] {
 }
 
 
+/*	====	CUSTOM CURSORS	=====*/
+/*	Cursor principal:	*/
+body {
+	cursor: url("../cursors/normal.cur"), auto;
+}
 
+/*	Links y botones:	*/
+a,
+button {
+	cursor: url("../cursors/link.cur"), pointer;
+}
+
+/*	Campos de texto:	*/
+input,
+textarea {
+	cursor: url("../cursors/text.cur"), text;
+}
+
+/*	Elementos con ayuda:	*/
+[title] {
+	cursor: url("../cursors/help.cur"), help;
+}
+
+/*	Botones deshabilitados:	*/
+button:disabled {
+	cursor: url("../cursors/unavailable.cur"), not-allowed;
+}
+
+/*	Futuro drag & drop:	*/
+.draggable {
+	cursor: url("../cursors/move.cur"), move;
+}
 
 
 /*HONEYPOT*/
