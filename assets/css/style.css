@@ -149,6 +149,30 @@ li {
   color: white;
 }
 
+/* ===== Sección Idiomas ===== */
+.language {
+  margin-top: 15px;
+}
+
+.language span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.bar {
+  background: #ddd;
+  border: 2px solid #000;
+  height: 18px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #4caf50;
+  transition: width 1.2s ease;
+}
 
 /* LANGUAGE DROPDOWN */
 .lang-option-disabled {
@@ -168,6 +192,34 @@ li {
 #current-lang {
   font-size: 22px;
   cursor: pointer;
+}
+/* ===== Logros ===== */
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements-list li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-achievement {
+  background: #1f3c88;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.btn-achievement:hover {
+  background: #16316e;
 }
 
 /* menú oculto */

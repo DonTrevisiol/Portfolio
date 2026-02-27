@@ -74,6 +74,25 @@ html.dark-mode #visit-counter {
 	box-shadow: 10px 10px 0 #ffffff;
 }
 
+/* Modo oscuro LOGROS */
+.dark-mode .btn-achievement {
+  background: #90caf9;
+  color: #121212;
+}
+
+.dark-mode .btn-achievement:hover {
+  background: #6faed6;
+}
+
+/* Dark mode IDIOMAS */
+.dark-mode .bar {
+  background: #333;
+  border-color: #fff;
+}
+
+.dark-mode .progress {
+  background: #81c784;
+}
 /*Social networks:*/
 /*	*/
 html.dark-mode body .social-link img {
