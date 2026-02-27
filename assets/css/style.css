@@ -428,7 +428,7 @@ body {
 a,
 button,
 #current-lang,
-.lang-option {
+.lang-menu .lang-option {
   cursor: url("../cursors/link.cur"), pointer;
 }
 
@@ -444,7 +444,7 @@ textarea {
 }
 
 /* Opciones de idioma deshabilitadas */
-.lang-option-disabled {
+.lang-menu .lang-option-disabled {
   cursor: url("../cursors/unavailable.cur"), not-allowed;
 }
 
