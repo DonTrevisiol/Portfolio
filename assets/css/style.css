@@ -416,40 +416,43 @@ a[href^="mailto"] {
 }
 
 
-/*	====	CUSTOM CURSORS	=====*/
-/*	Cursor principal:	*/
+/* ===== CUSTOM CURSORS CLEAN VERSION ===== */
+
+/* Cursor principal */
 body {
-	cursor: url("../cursors/normal.cur"), auto;
+  cursor: url("../cursors/normal.cur"), auto;
 }
 
-/*	Links y botones:	*/
-a,
-button,
-.navbar *,
-.lang-selector *,
-.btn-cv {
-	cursor: url("../cursors/link.cur"), pointer;
+/* Links reales */
+a {
+  cursor: url("../cursors/link.cur"), pointer;
 }
 
-/*	Campos de texto:	*/
+/* Botones completos */
+button {
+  cursor: url("../cursors/link.cur"), pointer;
+}
+
+/* Asegurar que hijos del botón usen el mismo cursor */
+button *,
+a * {
+  cursor: inherit;
+}
+
+/* Campos de texto */
 input,
 textarea {
-	cursor: url("../cursors/text.cur"), text;
+  cursor: url("../cursors/text.cur"), text;
 }
 
-/*	Elementos con ayuda:	*/
-[title] {
-	cursor: url("../cursors/help.cur"), help;
-}
-
-/*	Botones deshabilitados:	*/
+/* Botón deshabilitado */
 button:disabled {
-	cursor: url("../cursors/unavailable.cur"), not-allowed;
+  cursor: url("../cursors/unavailable.cur"), not-allowed;
 }
 
-/*	Futuro drag & drop:	*/
-.draggable {
-	cursor: url("../cursors/move.cur"), move;
+/* Elementos con title */
+[title] {
+  cursor: url("../cursors/help.cur"), help;
 }
 
 
