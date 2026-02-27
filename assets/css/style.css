@@ -428,6 +428,8 @@ body {
 a,
 button,
 #current-lang,
+#moon-sun-icon,
+#download-cv,
 .lang-menu .lang-option {
   cursor: url("../cursors/link.cur"), pointer;
 }
