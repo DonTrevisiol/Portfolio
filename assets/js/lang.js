@@ -98,13 +98,12 @@ async function setLanguage(lang) {
   document.documentElement.classList.add("lang-ready");
   document.body.classList.add("loaded");
 }
-
 document.querySelectorAll(".toggle-cert").forEach(button => {
-  button.addEventListener("click", () => {
-    const frame = button.previousElementSibling;
-    frame.style.display =
-      frame.style.display === "block" ? "none" : "block";
-  });
+	button.addEventListener("click", () => {
+		const frame = button.closest(".certificate").querySelector(".frame");
+		
+		frame.style.display = frame.style.display === "block" ? "none" : "block";
+	});
 });
 
 langOptions.forEach(option => {

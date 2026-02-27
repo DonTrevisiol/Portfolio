@@ -207,99 +207,90 @@ li {
   align-items: center;
   gap: 12px;
 }
+
 /* ===== CERTIFICATES ===== */
+/* ===== CERTIFICATES MINIMAL CLEAN ===== */
 
 .certificate {
-  margin-bottom: 50px;
+  margin: 60px 0;
   text-align: center;
 }
 
-/* Marco */
+/* Marco caricaturesco */
 .frame {
+  display: none;
   position: relative;
-  display: none; /* oculto hasta click */
   margin: 25px auto;
-  padding: 20px;
-  background: linear-gradient(
-    45deg,
-    #8b5a2b,
-    #a0522d,
-    #8b4513
-  );
-  border: 10px solid #5c3317;
-  border-radius: 6px;
-  box-shadow: 
-    0 8px 15px rgba(0,0,0,0.4),
-    inset 0 0 10px rgba(0,0,0,0.3);
-  max-width: 650px;
+  padding: 15px;
+  background: #fff;
+  border: 4px solid #000;
+  max-width: 600px;
+  box-shadow: 8px 8px 0 #000;
+  transform: rotate(-1deg);
 }
 
-/* Efecto madera */
-.frame::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    rgba(255,255,255,0.03) 0px,
-    rgba(0,0,0,0.05) 2px,
-    transparent 4px
-  );
-  pointer-events: none;
+.frame img {
+  width: 100%;
+  border: 3px solid #000;
+  display: block;
 }
 
-/* Clavo */
+/* Clavo simple */
 .nail {
   position: absolute;
-  top: -18px;
+  top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  width: 16px;
-  height: 16px;
-  background: radial-gradient(circle at 30% 30%, #eee, #999);
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-/* PDF */
-.frame iframe {
-  width: 100%;
-  height: 420px;
-  border: 6px solid #fff;
-  background: white;
-  border-radius: 4px;
-}
-
-/* Botón */
-.toggle-cert {
-  margin-top: 10px;
-  padding: 8px 14px;
-  border: 2px solid #000;
-  background: #fff;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s ease;
-}
-
-.toggle-cert:hover {
+  width: 18px;
+  height: 18px;
   background: #000;
-  color: #fff;
+  border-radius: 50%;
 }
 
-.btn-achievement {
-  background: #1f3c88;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 4px;
+/* Botones */
+.cert-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.toggle-cert,
+.download-cert {
+  padding: 8px 16px;
+  border: 3px solid #000;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
   text-decoration: none;
-  font-size: 14px;
-  transition: background 0.2s ease;
+  box-shadow: 4px 4px 0 #000;
+  transition: 0.1s ease;
 }
 
-.btn-achievement:hover {
-  background: #16316e;
+.toggle-cert:hover,
+.download-cert:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
 }
 
+/* Dark mode */
+.dark-mode .frame {
+  background: #111;
+  border-color: #fff;
+  box-shadow: 8px 8px 0 #fff;
+}
+
+.dark-mode .frame img {
+  border-color: #fff;
+}
+
+.dark-mode .toggle-cert,
+.dark-mode .download-cert {
+  background: #111;
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 4px 4px 0 #fff;
+}
 /* menú oculto */
 .lang-menu {
   position: absolute;
@@ -394,7 +385,7 @@ li {
 
 #submit-btn:disabled {
   opacity: 0.6;
-  cursor: not-allowed;
+  cursor: url("../cursors/unavailable.cur"), not-allowed;
 }
 
 /* Spinner */

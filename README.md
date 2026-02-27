@@ -2,7 +2,7 @@
 #
 #
 
-->	<a href="https://dontrevisiol.github.io/Portfolio" target="_blank">AQUÍ</a>	<-
+->	<a href="https://dontrevisiol.github.io/Portfolio" target="_about:blank">AQUÍ</a>	<-
 
 # Bienvenido a mi portafolios
 ---
