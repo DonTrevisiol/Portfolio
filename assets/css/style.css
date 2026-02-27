@@ -209,6 +209,7 @@ li {
 }
 
 .form-row input {
+	width: 100%;
 	flix: 1;
 	background: #D3D3D3;
 }
