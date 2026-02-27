@@ -27,6 +27,11 @@ h3 {
 p {
 	max-width: 600px;
 }
+a:hover,
+button:hover {
+	transform: translateY(-2px);
+	transition: transform 0.1s ease;
+}
 a[href^="tel"],
 a[href^="mailto"] {
 	text-decoration: none;
@@ -419,7 +424,10 @@ body {
 
 /*	Links y botones:	*/
 a,
-button {
+button,
+.navbar *,
+.lang-selector *,
+.btn-cv {
 	cursor: url("../cursors/link.cur"), pointer;
 }
 
