@@ -109,6 +109,24 @@ html.dark-mode #visit-counter {
 .dark-mode .progress {
   background: #81c784;
 }
+/* Dark mode */
+.dark-mode .frame {
+  background: #111;
+  border-color: #fff;
+  box-shadow: 8px 8px 0 #000;
+}
+
+.dark-mode .frame img {
+  border-color: #000;
+}
+
+.dark-mode .toggle-cert,
+.dark-mode .download-cert {
+  background: #111;
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 4px 4px 0 #fff;
+}
 /*Social networks:*/
 /*	*/
 html.dark-mode body .social-link img {
