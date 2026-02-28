@@ -1,6 +1,3 @@
-#_____
-#
-#
 
 ->	<a href="https://dontrevisiol.github.io/Portfolio" target="_about:blank">AQUÍ</a>	<-
 
