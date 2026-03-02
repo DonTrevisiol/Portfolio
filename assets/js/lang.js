@@ -1,3 +1,4 @@
+//lang.js
 const flagMap = {
 	es: "es",
 	en: "us",
@@ -45,6 +46,7 @@ function getSocialTitles(lang) {
 async function setLanguage(lang) {
   const response = await fetch(`data/${lang}.json`);
   const texts = await response.json();
+  window.currentTexts = texts;
   const titles = getSocialTitles(lang);
   
   document.documentElement.lang = lang;
@@ -91,20 +93,19 @@ async function setLanguage(lang) {
 	  };
 	  
 	downloadLink.href = `assets/pdf/${cvMap[lang]}`;
-  
-  
   // cerrar menú
   langMenu.style.display = "none";
   document.documentElement.classList.add("lang-ready");
   document.body.classList.add("loaded");
+  
+  document.querySelectorAll(".toggle-cert").forEach(button => {
+	  const frame = button.closest(".certificate").querySelector(".frame");
+	  const isVisible = frame.classList.contains("visible");
+	  
+	  button.textContent = isVisible ? texts.hideCertificate : texts.viewCertificate;
+	  });
 }
-document.querySelectorAll(".toggle-cert").forEach(button => {
-	button.addEventListener("click", () => {
-		const frame = button.closest(".certificate").querySelector(".frame");
-		
-		frame.style.display = frame.style.display === "block" ? "none" : "block";
-	});
-});
+
 
 langOptions.forEach(option => {
 	option.addEventListener("click", () => {
@@ -121,7 +122,21 @@ document.addEventListener("click", e => {
     
   }
 });
-
+document.querySelectorAll(".toggle-cert").forEach(button => {
+	button.addEventListener("click", () => {
+		
+		const frame = button.closest(".certificate").querySelector(".frame");
+		const texts = window.currentTexts;
+		
+		if (!frame || !texts) return;
+		
+		frame.classList.toggle("visible");
+		
+		const isVisible = frame.classList.contains("visible");
+		
+		button.textContent = isVisible ? texts.hideCertificate : texts.viewCertificate;
+	});
+});
 const savedLang = localStorage.getItem("language") || "es";
 document.documentElement.lang = savedLang;
 setLanguage(savedLang);

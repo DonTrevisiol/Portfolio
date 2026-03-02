@@ -1,3 +1,4 @@
+//visits.js
 function loadVisits() {
   const el = document.getElementById("gc-visits");
   const container = document.getElementById("visit-counter");

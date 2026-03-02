@@ -1,3 +1,4 @@
+//theme.js
 // Cargar tema guardado al abrir la página
 (function () {
   const theme = localStorage.getItem("theme");
