@@ -139,9 +139,10 @@ body {
 /* Links reales */
 a,
 button,
-#current-lang,
 #moon-sun-icon,
 #download-cv,
+#current-lang,
+.lang-selector,
 .lang-menu .lang-option {
   cursor: url("../cursors/link.cur"), pointer;
 }
