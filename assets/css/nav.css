@@ -82,8 +82,10 @@
 /* menú oculto */
 .lang-menu {
   position: absolute;
-  top: 120%;
-  right: 30;
+  top: 100%;
+  left: 80%;
+  transform: translateX(-50%);
+  margin-top: 8px;
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 6px;

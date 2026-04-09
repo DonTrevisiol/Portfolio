@@ -66,8 +66,14 @@ a[href^="mailto"] {
 }
 
 	.lang-menu {
+		position: fixed;
 		top: 60px;
+		left: 0;
+		right: 0;
+		transform: none;
+		margin-top: 6px;
 		width: 100%;
+		min-width: unset;
 		border-radius: 0;
 	}
 	.lang-option-disabled {
