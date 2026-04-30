@@ -27,6 +27,7 @@
 	"proyect1": "Hotel cash movements register",
 	"proyect2": "Japanese memorama",
 	"proyect3": "Center of life",
+	"proyect4": "Piter Parque's web site",
 	"contact": "Contact",
 	"place": "🗺️ Santa Cruz de La Sierra, Bolivia 🌎",
 	"phone": "📞 ¡Call me! Now! +59167695949 🤙",
@@ -37,6 +38,5 @@
 	"sendMessage": "Send message",
 	"formSuccess": "Message sent successfully",
 	"formError": "Error sending message",
-	"requiredField": "Please fill out this field.",
-	"formSuccess": "Message sent successfully."
+	"requiredField": "Please fill out this field."
 	}

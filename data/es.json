@@ -27,6 +27,7 @@
 	"proyect1": "Registro de movimientos de caja para hotel",
 	"proyect2": "Memorama Japonés",
 	"proyect3": "Centro de vida",
+	"proyect4": "Sitio web de Piter Parque",
 	"contact": "Contacto",
 	"place": "🗺️ Santa Cruz de La Sierra, Bolivia 🌎",
 	"phone": "📞 Llamame ahora +59167695949 🤙",
@@ -37,6 +38,5 @@
 	"sendMessage": "Enviar mensaje",
 	"formSuccess": "Mensaje enviado correctamente",
 	"formError": "Error al enviar el mensaje",
-	"requiredField": "Por favor, completa este campo.",
-	"formSuccess": "Mensaje enviado correctamente."
+	"requiredField": "Por favor, completa este campo."
 	}

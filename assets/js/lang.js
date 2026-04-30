@@ -3,12 +3,14 @@ const flagMap = {
 	es: "es",
 	en: "us",
 	it: "it",
-	jp: "jp"
+	jp: "jp",
+	fr: "fr"
 	};
 const langNames = {
 	es: "Español",
 	en: "English",
 	it: "Italiano",
+	fr: "Français",
 	jp: "日本語"
 	};
 const redesSociales = {
@@ -25,6 +27,20 @@ const socialNetworks = {
 	facebookTitle: "Facebook - Personal profile",
 	githubTitle: "GitHub - Repositories and code"
 	}
+const reseauxSociaux = {
+	whatsappTitle: "WhatsApp - Écrivez-moi",
+	linkedinTitle: "LinkedIn - Profil professionnel",
+	youtubeTitle: "YouTube - Chaîne officielle",
+	facebookTitle: "Facebook - Profil personnel",
+	githubTitle: "GitHub - Dépôts et code"
+	}
+const retiSociali = {
+	whatsappTitle: "WhatsApp - Scrivimi",
+	linkedinTitle: "LinkedIn - Profilo professionale",
+	youtubeTitle: "YouTube - Canale ufficiale",
+	facebookTitle: "Facebook - Profilo personale",
+	githubTitle: "GitHub - Repository e codice"
+	}
 	
 const currentLangBtn = document.getElementById("current-lang");
 const langMenu = document.getElementById("lang-menu");
@@ -39,9 +55,13 @@ currentLangBtn.addEventListener("click", () => {
 function getSocialTitles(lang) {
 	if (lang === 'en') {
 		return socialNetworks;
-		} else {
+		} else if (lang === 'es'){
 			return redesSociales;
-			}
+		} else if (lang === 'fr'){
+			return reseauxSociaux;
+		} else if (lang === 'it'){
+			return retiSociali;
+		}
 	}
 async function setLanguage(lang) {
   const response = await fetch(`data/${lang}.json`);
@@ -89,7 +109,8 @@ async function setLanguage(lang) {
 		es: "cv_es.pdf",
 		en: "cv_en.pdf",
 		it: "cv_es.pdf",
-		jp: "cv_es.pdf"
+		jp: "cv_es.pdf",
+		fr: "cv_es.pdf"
 	  };
 	  
 	downloadLink.href = `assets/pdf/${cvMap[lang]}`;
