@@ -81,6 +81,8 @@ li {
 	background: rgba(0,0,0,0.06);
 	color: #555;
 	opacity: 0.6;
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
 }
 .flag {
 	border-radius: 100px;

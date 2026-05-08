@@ -8,7 +8,7 @@ function loadVisits() {
   fetch("https://dontrevisiol.goatcounter.com/counter/TOTAL.json")
     .then(r => r.json())
     .then(data => {
-      if (data && data.count) {
+      if (data && typeof data.count !== "undefined") {
         el.textContent = data.count;
       } else {
         container.style.display = "none";

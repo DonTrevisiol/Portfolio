@@ -80,10 +80,11 @@ a[href^="mailto"] {
 	display: block;
 	}
 	#visit-counter {
-		position: static;
-		right: 10px;
-		bottom: 10px;
-		font-size: 11px;
-		padding: 5px 8px;
+		position: fixed;
+		right: 8px;
+		bottom: 8px;
+		font-size: 10px;
+		padding: 4px 7px;
+		z-index: 9999;
 	}
 }
